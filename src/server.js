@@ -7,8 +7,7 @@ var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// var pusher = new Pusher({ appId: APP_ID, key: APP_KEY, secret:  APP_SECRET });
-var pusher = new Pusher({ appId: "314073", key: "da857397f8eec3092630", secret:  "657d91ad4a1473b3014e" });
+var pusher = new Pusher({ appId: APP_ID, key: APP_KEY, secret:  APP_SECRET });//change to use correct App Keys
 
 app.get('/',function(req,res){      
      res.sendFile('index.html', {root: __dirname });
